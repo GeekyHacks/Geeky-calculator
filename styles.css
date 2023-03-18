@@ -3,9 +3,7 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*s {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -13,13 +11,11 @@ html {
 
 body {
   background-color: rgb(43, 25, 3);
-  justify-content: center;
 }
 
 .calculator {
   background-color: burlywood;
 
- 
   padding: 5px;
   border: 2px solid #4b3333;
   border-radius: 7px;
@@ -30,8 +26,8 @@ body {
   width: 400px;
 }
 
-.calculator__display{
-  width: 99.7%;
+.calculator__display {
+  width: auto;
   font-size: 5rem;
   height: 80px;
   padding: 5px;
@@ -68,14 +64,23 @@ button:hover {
 
 .key--operator {
   background-color: orange;
-  
 }
 .key--equal {
   background-color: orange;
- 
 
   color: #fff;
-  height: 98.7%;
+  height: auto;
   grid-area: 2 / 4 / 6 / 5;
- 
+}
+/*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
+@media (max-width: 768px) {
+  .calculator {
+    display: none;
+  }
+  .calculator__display {
+    display: none;
+  }
+  .calculator__keys {
+    display: none;
+  }
 }
