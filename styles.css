@@ -72,38 +72,8 @@ button:hover {
   grid-area: 2 / 4 / 6 / 5;
 }
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
-@media only screen and (max-width: 375px) {
+@media (max-width: 375px) {
   .calculator {
     display: display;
   }
 }
-
-@media only screen and (min-width: 375px) {
-  .calculator {
-    display: display;
-  }
-}
-
-@media only screen and (min-height: 667px) {
-  .calculator {
-    display: display;
-  }
-}
-
-@media only screen and (min-width: 375px) and (orientation: landscape) {
-  .calculator {
-    display: display;
-  }}
-
-@media only screen and (min-width: 667px) and (orientation: portrait) {
-  .calculator {
-    display: display;
-  }}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min--moz-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2) {
-    .calculator {
-      display: display;
-    }}
