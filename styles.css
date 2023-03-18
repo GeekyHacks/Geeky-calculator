@@ -75,7 +75,7 @@ button:hover {
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
 @media (max-width: 40rem) {
   .calculator {
-    display: none;
+    display: flex;
   }
 
 }
