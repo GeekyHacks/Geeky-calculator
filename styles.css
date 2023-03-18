@@ -73,7 +73,7 @@ button:hover {
   grid-area: 2 / 4 / 6 / 5;
 }
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 375px) {
   .calculator {
     display: none;
   }
