@@ -93,14 +93,77 @@ button:hover {
   .calculator {
     display: display;
   }
+  .calculator__display {
+    /*this will hide any number thats greater than box width*/
+    overflow: hidden;
+  
+    box-sizing: border-box;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    padding: 5px;
+    border: 2px solid #4b3333;
+    border-radius: 7px;
+    margin: 1px;
+    background-color: #161010;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
 }
 @media (min-width: 375px) and (orientation: landscape) {
   .calculator {
     display: display;
   }
+  .calculator__display {
+    /*this will hide any number thats greater than box width*/
+    overflow: hidden;
+  
+    box-sizing: border-box;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    padding: 5px;
+    border: 2px solid #4b3333;
+    border-radius: 7px;
+    margin: 1px;
+    background-color: #161010;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
 }
 @media (min-width: 667px) and (orientation: portrait) {
   .calculator {
     display: display;
+  }
+  .calculator__display {
+    /*this will hide any number thats greater than box width*/
+    overflow: hidden;
+  
+    box-sizing: border-box;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    padding: 5px;
+    border: 2px solid #4b3333;
+    border-radius: 7px;
+    margin: 1px;
+    background-color: #161010;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
   }
 }
