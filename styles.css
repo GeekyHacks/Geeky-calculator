@@ -15,7 +15,7 @@ body {
 
 .calculator {
   background-color: burlywood;
-
+display: none;
   padding: 5px;
   border: 2px solid #4b3333;
   border-radius: 7px;
@@ -73,9 +73,9 @@ button:hover {
   grid-area: 2 / 4 / 6 / 5;
 }
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
-@media (max-width: 40rem) {
+@media (max-width: 320px) {
   .calculator {
-    display: flex;
+    display: block;
   }
 
 }
