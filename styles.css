@@ -23,7 +23,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: fit-content;
+  height: 470px;
 }
 
 .calculator__display {
@@ -73,9 +73,8 @@ button:hover {
   grid-area: 2 / 4 / 6 / 5;
 }
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
-@media (max-width:320px) {
+@media only screen and (max-width: 320px) {
   .calculator {
     display: none;
   }
-
 }
