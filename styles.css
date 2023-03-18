@@ -69,8 +69,8 @@ button {
 .calculator__keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
 }
 
 button:hover {
@@ -92,6 +92,8 @@ button:hover {
 @media (max-width: 375px) {
   .calculator {
     box-sizing: border-box;
+    overflow: hidden;
+
 
   }
   .calculator__display {
@@ -119,6 +121,8 @@ button:hover {
 @media (min-width: 375px) and (orientation: landscape) {
   .calculator {
     box-sizing: border-box;
+    overflow: hidden;
+
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
@@ -145,6 +149,8 @@ button:hover {
 @media (min-width: 667px) and (orientation: portrait) {
   .calculator {
     box-sizing: border-box;
+    overflow: hidden;
+
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
