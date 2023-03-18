@@ -91,7 +91,9 @@ button:hover {
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
 @media (max-width: 375px) {
   .calculator {
-    display: display;
+    display: none;
+    box-sizing: border-box;
+
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
@@ -117,7 +119,8 @@ button:hover {
 }
 @media (min-width: 375px) and (orientation: landscape) {
   .calculator {
-    display: display;
+    display: none;
+    box-sizing: border-box;
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
@@ -143,7 +146,8 @@ button:hover {
 }
 @media (min-width: 667px) and (orientation: portrait) {
   .calculator {
-    display: display;
+    display: none;
+    box-sizing: border-box;
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
