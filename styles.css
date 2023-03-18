@@ -30,7 +30,7 @@ body {
   width: 400px;
 }
 
-.calculator-screen {
+.calculator__display{
   width: 99.7%;
   font-size: 5rem;
   height: 80px;
