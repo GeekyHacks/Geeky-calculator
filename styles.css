@@ -91,7 +91,6 @@ button:hover {
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
 @media (max-width: 375px) {
   .calculator {
-    display: none;
     box-sizing: border-box;
 
   }
@@ -119,7 +118,6 @@ button:hover {
 }
 @media (min-width: 375px) and (orientation: landscape) {
   .calculator {
-    display: none;
     box-sizing: border-box;
   }
   .calculator__display {
@@ -146,7 +144,6 @@ button:hover {
 }
 @media (min-width: 667px) and (orientation: portrait) {
   .calculator {
-    display: none;
     box-sizing: border-box;
   }
   .calculator__display {
