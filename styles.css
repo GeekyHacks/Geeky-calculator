@@ -79,12 +79,12 @@ button:hover {
     display: display;
   }
 }
-@media (max-width: 375px) and (orientation: landscape) {
+@media (min-width: 375px) and (orientation: landscape) {
   .calculator {
     display: display;
   }
 }
-@media (max-width: 667px) and (orientation: portrait)
+@media (min-width: 667px) and (orientation: portrait)
 {   .calculator {
   display: display;
 }}
