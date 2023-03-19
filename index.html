@@ -3,26 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Calculator</title>
   </head>
 
   <body>
-
     <main>
       <div class="calculator">
-        <form  class="calculator__display">0</form>
-  
+        <form class="calculator__display">0</form>
+
         <div class="calculator__keys">
           <!--data-action attribute to determine the type of key -->
-  
+
           <button class="key--operator" data-action="add">+</button>
           <button class="key--operator" data-action="subtract">-</button>
           <button class="key--operator" data-action="multiply">*</button>
           <button class="key--operator" data-action="divide">÷</button>
-  
+
           <button>7</button>
           <button>8</button>
           <button>9</button>
@@ -32,18 +31,16 @@
           <button>1</button>
           <button>2</button>
           <button>3</button>
-  
+
           <button>0</button>
           <button class="decimal" data-action="decimal">.</button>
-  
+
           <button data-action="clear">AC</button>
           <button class="key--equal" data-action="calculate">=</button>
         </div>
       </div>
-  
-
     </main>
- 
+
     <!--It is considered the best practice to place the <script> element in the body section just before the closing /  body tag -->
     <script src="script.js"></script>
   </body>

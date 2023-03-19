@@ -31,8 +31,6 @@ body {
   width: 400px;
 
   box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
-
-  
 }
 
 .calculator__display {
@@ -51,7 +49,6 @@ body {
   margin: 1px;
   background-color: #161010;
   color: #fff;
-
 }
 button {
   background: #0e0b22;
@@ -90,13 +87,11 @@ button:hover {
   .calculator {
     box-sizing: border-box;
     overflow: hidden;
-
-
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
     overflow: hidden;
-  
+
     box-sizing: border-box;
     font-size: 1.714285714em;
     padding: 0.5em 0.75em;
@@ -119,12 +114,11 @@ button:hover {
   .calculator {
     box-sizing: border-box;
     overflow: hidden;
-
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
     overflow: hidden;
-  
+
     box-sizing: border-box;
     font-size: 1.714285714em;
     padding: 0.5em 0.75em;
@@ -147,12 +141,11 @@ button:hover {
   .calculator {
     box-sizing: border-box;
     overflow: hidden;
-
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
     overflow: hidden;
-  
+
     box-sizing: border-box;
     font-size: 1.714285714em;
     padding: 0.5em 0.75em;

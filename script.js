@@ -1,9 +1,7 @@
 // another way of coding it is using early returns
-const calculator = document.querySelector('.calculator');
-const display = document.querySelector('.calculator__display');
-const keys = calculator.querySelector('.calculator__keys');
-
-
+const calculator = document.querySelector(".calculator");
+const display = document.querySelector(".calculator__display");
+const keys = calculator.querySelector(".calculator__keys");
 
 const calculate = (n1, operator, n2) => {
   //you can remove the {} from if statements
@@ -12,23 +10,23 @@ const calculate = (n1, operator, n2) => {
 
   const firstNum = parseFloat(n1);
   const secondNum = parseFloat(n2);
-  if (operator === 'add') return firstNum + secondNum;
-  if (operator === 'subtract') return firstNum - secondNum;
-  if (operator === 'multiply') return firstNum * secondNum;
-  if (operator === 'divide') return firstNum / secondNum;
+  if (operator === "add") return firstNum + secondNum;
+  if (operator === "subtract") return firstNum - secondNum;
+  if (operator === "multiply") return firstNum * secondNum;
+  if (operator === "divide") return firstNum / secondNum;
 };
 //---------------------------------------------------------------------------------//
 //This function should return the type of key that was clicked.
 const getKeyType = (key) => {
   const { action } = key.dataset;
-  if (!action) return 'number';
+  if (!action) return "number";
   if (
-    action === 'add' ||
-    action === 'subtract' ||
-    action === 'multiply' ||
-    action === 'divide'
+    action === "add" ||
+    action === "subtract" ||
+    action === "multiply" ||
+    action === "divide"
   )
-    return 'operator';
+    return "operator";
   // For everything else, return the action
   return action;
 };
@@ -52,36 +50,36 @@ const createResultString = (key, displayedNum, state) => {
   const keyType = getKeyType(key);
   const { firstValue, operator, modValue, previousKeyType } = state;
 
-  if (keyType === 'number') {
-    return displayedNum === '0' ||
-      previousKeyType === 'operator' ||
-      previousKeyType === 'calculate'
+  if (keyType === "number") {
+    return displayedNum === "0" ||
+      previousKeyType === "operator" ||
+      previousKeyType === "calculate"
       ? keyContent
       : displayedNum + keyContent;
   }
 
-  if (keyType === 'decimal') {
-    if (!displayedNum.includes('.')) return displayedNum + '.';
-    if (previousKeyType === 'operator' || previousKeyType === 'calculate')
-      return '0.';
+  if (keyType === "decimal") {
+    if (!displayedNum.includes(".")) return displayedNum + ".";
+    if (previousKeyType === "operator" || previousKeyType === "calculate")
+      return "0.";
 
     return displayedNum;
   }
 
-  if (keyType === 'operator') {
+  if (keyType === "operator") {
     return firstValue &&
       operator &&
-      previousKeyType !== 'operator' &&
-      previousKeyType !== 'calculate'
+      previousKeyType !== "operator" &&
+      previousKeyType !== "calculate"
       ? calculate(firstValue, operator, displayedNum)
       : displayedNum;
   }
 
-  if (keyType === 'clear') return 0;
+  if (keyType === "clear") return 0;
 
-  if (keyType === 'calculate') {
+  if (keyType === "calculate") {
     return firstValue
-      ? previousKeyType === 'calculate'
+      ? previousKeyType === "calculate"
         ? calculate(displayedNum, operator, modValue)
         : calculate(firstValue, operator, displayedNum)
       : displayedNum;
@@ -102,27 +100,27 @@ const updateCalculatorState = (
 
   calculator.dataset.previousKeyType = keyType;
 
-  if (keyType === 'operator') {
+  if (keyType === "operator") {
     calculator.dataset.operator = key.dataset.action;
     calculator.dataset.firstValue =
       firstValue &&
       operator &&
-      previousKeyType !== 'operator' &&
-      previousKeyType !== 'calculate'
+      previousKeyType !== "operator" &&
+      previousKeyType !== "calculate"
         ? calculatedValue
         : displayedNum;
   }
 
-  if (keyType === 'calculate') {
+  if (keyType === "calculate") {
     calculator.dataset.modValue =
-      firstValue && previousKeyType === 'calculate' ? modValue : displayedNum;
+      firstValue && previousKeyType === "calculate" ? modValue : displayedNum;
   }
 
-  if (keyType === 'clear' && key.textContent === 'AC') {
-    calculator.dataset.firstValue = '';
-    calculator.dataset.modValue = '';
-    calculator.dataset.operator = '';
-    calculator.dataset.previousKeyType = '';
+  if (keyType === "clear" && key.textContent === "AC") {
+    calculator.dataset.firstValue = "";
+    calculator.dataset.modValue = "";
+    calculator.dataset.operator = "";
+    calculator.dataset.previousKeyType = "";
   }
 };
 
@@ -135,14 +133,14 @@ const updateCalculatorState = (
 const updateVisualState = (key, calculator) => {
   const keyType = getKeyType(key);
   Array.from(key.parentNode.children).forEach((k) =>
-    k.classList.remove('is-depressed')
+    k.classList.remove("is-depressed")
   );
 
-  if (keyType === 'operator') key.classList.add('is-depressed');
-  if (keyType === 'clear' && key.textContent !== 'AC') key.textContent = 'AC';
-  if (keyType !== 'clear') {
-    const clearButton = calculator.querySelector('[data-action=clear]');
-    clearButton.textContent = 'CE';
+  if (keyType === "operator") key.classList.add("is-depressed");
+  if (keyType === "clear" && key.textContent !== "AC") key.textContent = "AC";
+  if (keyType !== "clear") {
+    const clearButton = calculator.querySelector("[data-action=clear]");
+    clearButton.textContent = "CE";
   }
 };
 
@@ -150,8 +148,8 @@ const updateVisualState = (key, calculator) => {
   the type of key that is pressed.
    In this case, we can use an event delegation pattern to liste  */
 
-keys.addEventListener('click', (e) => {
-  if (!e.target.matches('button')) return;
+keys.addEventListener("click", (e) => {
+  if (!e.target.matches("button")) return;
 
   // to show the clicked number on the display div we can use the textContent proprety
   const key = e.target;
