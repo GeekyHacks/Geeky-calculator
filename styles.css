@@ -18,8 +18,9 @@ body {
 }
 
 .calculator {
+  overflow: hidden;
   box-sizing: border-box;
-
+  inline-size: 90%;
   background-color: burlywood;
   padding: 5px;
   border: 2px solid #4b3333;
@@ -35,8 +36,11 @@ body {
 
 .calculator__display {
   /*this will hide any number thats greater than box width*/
+
+  /* inline-size limit the displayed content*/
   overflow: hidden;
   box-sizing: border-box;
+  inline-size: 95%;
   font-size: 1.714285714em;
   padding: 0.5em 0.75em;
   text-align: right;
@@ -83,84 +87,21 @@ button:hover {
   grid-area: 2 / 4 / 6 / 5;
 }
 /*We use this media query to make a website responsive on mobile, tablets, and desktop.  */
-@media (max-width: 375px) {
-  .calculator {
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  .calculator__display {
-    /*this will hide any number thats greater than box width*/
-    overflow: hidden;
 
-    box-sizing: border-box;
-    font-size: 1.714285714em;
-    padding: 0.5em 0.75em;
-    text-align: right;
-    width: 100%;
-    font-size: 5rem;
-    height: 80px;
-    padding: 5px;
-    border: 2px solid #4b3333;
-    border-radius: 7px;
-    margin: 1px;
-    background-color: #161010;
-    color: #fff;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 10px;
-  }
-}
 @media (min-width: 375px) and (orientation: landscape) {
   .calculator {
     box-sizing: border-box;
     overflow: hidden;
+    inline-size:375px ;  
+  
   }
   .calculator__display {
     /*this will hide any number thats greater than box width*/
-    overflow: hidden;
 
     box-sizing: border-box;
-    font-size: 1.714285714em;
-    padding: 0.5em 0.75em;
-    text-align: right;
-    width: 100%;
-    font-size: 5rem;
-    height: 80px;
-    padding: 5px;
-    border: 2px solid #4b3333;
-    border-radius: 7px;
-    margin: 1px;
-    background-color: #161010;
-    color: #fff;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 10px;
+    overflow: hidden;
+    inline-size:359px;  
+  
   }
 }
-@media (min-width: 667px) and (orientation: portrait) {
-  .calculator {
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  .calculator__display {
-    /*this will hide any number thats greater than box width*/
-    overflow: hidden;
 
-    box-sizing: border-box;
-    font-size: 1.714285714em;
-    padding: 0.5em 0.75em;
-    text-align: right;
-    width: 100%;
-    font-size: 5rem;
-    height: 80px;
-    padding: 5px;
-    border: 2px solid #4b3333;
-    border-radius: 7px;
-    margin: 1px;
-    background-color: #161010;
-    color: #fff;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 10px;
-  }
-}
