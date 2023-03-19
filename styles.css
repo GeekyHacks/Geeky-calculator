@@ -38,7 +38,6 @@ body {
 .calculator__display {
   /*this will hide any number thats greater than box width*/
   overflow: hidden;
-
   box-sizing: border-box;
   font-size: 1.714285714em;
   padding: 0.5em 0.75em;
@@ -52,9 +51,7 @@ body {
   margin: 1px;
   background-color: #161010;
   color: #fff;
-  text-align: right;
-  padding-right: 20px;
-  padding-left: 10px;
+
 }
 button {
   background: #0e0b22;
